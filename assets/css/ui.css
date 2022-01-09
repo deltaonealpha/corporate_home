@@ -1,0 +1,63 @@
+.lightthborder {
+  border: var(--bordercolour);
+}
+
+.borderbottom {
+  border-bottom: var(--bordercolour);
+}
+
+.lighttextct {
+  color: var(--textcolour);
+}
+
+.shaderbacklight {
+  box-shadow: var(--shadowcolour);
+  background: var(--bgcolour);
+}
+
+.innerboxshadowlth {
+  box-shadow: var(--innerboxshadowlth);
+}
+
+.bordertop {
+  border-top: var(--bordercolour);
+}
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #d1d1d1;
+  border-radius: 2px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #343434;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #adadad;
+}
+
+.stackbutton {
+  background: var(--stackbuttonbg);
+  box-shadow: none;
+  color: var(--stackbuttonfg);
+}
+
+.stackbutton2c {
+  background: var(--stackbutton2cbg);
+  /*box-shadow: none;*/
+  color: var(--stackbutton2cfg);
+}
+
