@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%;" lang="en" translate="no">
+
+<head>
+    <meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.0-rc.3/jquery-ui.js" integrity="sha256-tYLuvehjddL4JcVWw1wRMB0oPSz7fKEpdZrIWf3rWNA=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+<style>
+  .slow  .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s; }
+  .fast  .toggle-group { transition: left 0.1s; -webkit-transition: left 0.1s; }
+  .quick .toggle-group { transition: none;      -webkit-transition: none; }
+</style>
+<style>
+  .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 4px;background: #373737;font-family: 'Nunito Sans', sans-serif;color: #d1d1d1;font-size: 13px;}
+  .toggle.ios .toggle-handle { border-radius: 4px;background: #7d7d7d;}
+.toggle {color: #d1d1d1;padding:0px;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src='https://cdn.plot.ly/plotly-2.6.3.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Lirecent Corporation</title>
+    <meta name="theme-color" content="rgb(0,0,0)">
+    <meta name="twitter:description" content="Read, write and connect on Lirecent, the open-source literature platform for all and sundry.">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="">
+    <meta name="twitter:title" content="Lirecent Literature">
+    <meta property="og:image" content="../assets/img/icon/linkshareimage.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="../assets/img/icon/dwrsplogo.png">
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" sizes="1064x1028" href="assets/img/icon/dwrsplogo.png">
+    <link rel="icon" type="image/png" sizes="1064x1028" href="assets/img/icon/dwrsplogo.png">
+    <link rel="icon" type="image/png" sizes="1064x1028" href="assets/img/icon/dwrsplogo.png">
+    <link rel="icon" type="image/png" sizes="1064x1028" href="assets/img/icon/dwrsplogo.png">
+    <link rel="icon" type="image/png" sizes="1064x1028" href="assets/img/icon/dwrsplogo.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/bantayoglight.css">
+    <link rel="stylesheet" href="assets/css/bantayogregular.css">
+    <link rel="stylesheet" href="assets/css/bantayogsemilight.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Black+Han+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier+Prime&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-Calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/jquery.passwordRequirements.css">
+    <link rel="stylesheet" href="assets/css/lirecent.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/responsive-blog-card-slider.css">
+    <link rel="stylesheet" href="assets/css/SideBar-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-right-opening.css">
+    <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product-1.css">
+    <link rel="stylesheet" href="assets/css/Swiper-Slider-Card-For-Blog-Or-Product.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch-1.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/wysiwyg.css">
+</head>
+
+<body id="body" style="width: 100%;height: 100%;scroll-snap-type: y mandatory;background: #0b0b0b;">
+    <div id="contentbody" style="opacity: 1;">
+        <header class="text-center text-white masthead" id="header" style="height: 345px;padding-bottom: 1px;width: 100%;background: transparent;color: #d1d1d1;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 col-md-7 col-lg-6 col-xl-6 col-xxl-7 text-start mx-auto position-relative" style="padding-left: 23px;text-align: left;padding-right: 23px;">
+                        <div><a data-bss-hover-animate="pulse" href="/index.html" style="color: #d1d1d1;padding-right: 18px;font-family: 'Nunito Sans', sans-serif;letter-spacing: 2px;font-size: 12px;font-weight: bold;">HOME</a><a data-bss-hover-animate="pulse" href="/products.html" style="color: #d1d1d1;padding-right: 18px;font-family: 'Nunito Sans', sans-serif;letter-spacing: 2px;font-size: 9px;">PRODUCTS</a><a data-bss-hover-animate="pulse" href="/contact.html" style="color: #d1d1d1;padding-right: 18px;font-family: 'Nunito Sans', sans-serif;letter-spacing: 2px;font-size: 9px;">CONTACT</a></div>
+                        <h1 style="font-size: 26px;text-align: left;font-family: 'Nunito Sans', sans-serif;margin-top: 0px;padding-top: 9px;color: #d1d1d1;margin-right: 0px;margin-bottom: 0px;"><img src="assets/img/icon/dwrsplogo.png" style="width: 30px;height: 28px;margin-bottom: 5px;margin-right: 5px;">Lirecent Corporation</h1>
+                        <h1 style="font-size: 14px;text-align: left;font-family: 'Nunito Sans', sans-serif;margin-top: -9px;margin-bottom: 9px;padding-top: 5px;color: #adadad;margin-right: 0px;padding-left: 35px;letter-spacing: 4px;">NEW DELHI</h1>
+                        <div id="crpagediv-13" class="shaderbacklight" style="border-radius: 5px;color: #d1d1d1;font-size: 16px;font-family: 'Nunito Sans', sans-serif;padding-top: 9px;padding-bottom: 15px;padding-left: 11px;margin-top: 5px;text-align: center;padding-right: 11px;display:none;all;">
+                            <p class="ctdark borderbottom" style="font-size: 14px;font-family: 'Nunito Sans', sans-serif;text-align: left;margin-bottom: 0px;padding-bottom: 5px;"><strong>FILTER</strong>&nbsp;YOUR SEARCH</p>
+                            <div style="text-align: center;margin-top: 9px;"><a class="btn btn-primary classtext classbgr innerboxshadowlth" role="button" id="searchfilter-1" style="background: rgba(209,209,209,0.17);border-radius: 3px;font-family: 'Nunito Sans', sans-serif;text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 9px;padding-bottom: 9px;width: 18%;font-size: 13px;margin-right: 1%;font-weight: bold;border-style: none;border-bottom: 4px solid #4b4b4b ;" onclick="enableSearchFilter(this.id);">POEM</a><a class="btn btn-primary classtext classbgr innerboxshadowlth" role="button" id="searchfilter-2" style="background: rgba(209,209,209,0.17);border-radius: 3px;font-family: 'Nunito Sans', sans-serif;text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 9px;padding-bottom: 9px;width: 19%;font-size: 13px;margin-left: 1%;margin-right: 1%;font-weight: bold;border-style: none;border-bottom: 4px solid #4b4b4b ;" onclick="enableSearchFilter(this.id);">STORY<br></a><a class="btn btn-primary classtext classbgr innerboxshadowlth" role="button" id="searchfilter-3" style="background: rgba(209,209,209,0.17);border-radius: 3px;font-family: 'Nunito Sans', sans-serif;text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 9px;padding-bottom: 9px;width: 21%;font-size: 13px;margin-right: 1%;font-weight: bold;border-style: none;border-bottom: 4px solid #4b4b4b ;" onclick="enableSearchFilter(this.id);">SAVED</a><a class="btn btn-primary classtext classbgr innerboxshadowlth" role="button" id="searchfilter-4" style="background: rgba(209,209,209,0.17);border-radius: 3px;font-family: 'Nunito Sans', sans-serif;text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 9px;padding-bottom: 9px;width: 37%;font-size: 13px;margin-left: 1%;margin-top: 0px;font-weight: bold;border-style: none;border-bottom: 4px solid #4b4b4b ;" onclick="enableSearchFilter(this.id);">BOOKMARKED<br></a></div><script>
+function enableSearchFilter(currentelement) {
+	if (document.getElementById(currentelement).style.borderBottom == "5px solid rgb(59, 145, 51)") {	document.getElementById(currentelement).style.borderBottom = "5px solid #4b4b4b";
+	} else {        document.getElementById(currentelement).style.borderBottom = "5px solid #3b9133";
+	}
+}
+</script>
+                            <div style="text-align: center;margin-top: 9px;"></div>
+                        </div>
+                        <div style="background: url(&quot;assets/img/background/background_blueblack_blur.png&quot;) center / contain;"></div><script>
+function fitlerSearchDiv_display() {
+   $("#crpagediv-13").slideToggle(200);
+}
+function fitlerSearchDiv_hide() {
+$("#crpagediv-13").slideToggle(200);
+}
+</script>
+                        <div style="margin-top: 5px;border-top-style: none;"></div>
+                        <div style="background: url(&quot;assets/img/background/background_blueblack_blur.png&quot;) center / contain;"></div>
+                    </div>
+                    <div class="col">
+                        <h1 style="font-size: 9px;text-align: right;margin-top: -12px;"><button class="btn btn-dark" data-bss-hover-animate="pulse" type="button" style="border-style: none;border-radius: 5px;font-family: 'Nunito Sans', sans-serif;text-align: center;padding-left: 12px;padding-right: 12px;padding-top: 9px;padding-bottom: 9px;font-size: 14px;color: #d1d1d1;background: #191a1c;margin-right: 9px;margin-top: 9px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-circle-dotted" style="margin-bottom: 3px;font-size: 18px;color: #acffac;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <line x1="7.5" y1="4.21" x2="7.5" y2="4.22"></line>
+                                    <line x1="4.21" y1="7.5" x2="4.21" y2="7.51"></line>
+                                    <line x1="3" y1="12" x2="3" y2="12.01"></line>
+                                    <line x1="4.21" y1="16.5" x2="4.21" y2="16.51"></line>
+                                    <line x1="7.5" y1="19.79" x2="7.5" y2="19.8"></line>
+                                    <line x1="12" y1="21" x2="12" y2="21.01"></line>
+                                    <line x1="16.5" y1="19.79" x2="16.5" y2="19.8"></line>
+                                    <line x1="19.79" y1="16.5" x2="19.79" y2="16.51"></line>
+                                    <line x1="21" y1="12" x2="21" y2="12.01"></line>
+                                    <line x1="19.79" y1="7.5" x2="19.79" y2="7.51"></line>
+                                    <line x1="16.5" y1="4.21" x2="16.5" y2="4.22"></line>
+                                    <line x1="12" y1="3" x2="12" y2="3.01"></line>
+                                </svg></button><button class="btn btn-dark" data-bss-hover-animate="pulse" type="button" style="border-style: none;border-radius: 5px;font-family: 'Nunito Sans', sans-serif;text-align: center;padding-left: 12px;padding-right: 12px;padding-top: 9px;padding-bottom: 9px;font-size: 14px;color: #d1d1d1;background: #191a1c;margin-right: 9px;margin-top: 9px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-circle-dashed" style="margin-bottom: 3px;font-size: 18px;color: #acffac;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+                                    <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+                                    <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+                                    <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+                                    <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+                                    <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+                                    <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+                                    <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
+                                </svg></button><button class="btn btn-dark" data-bss-hover-animate="pulse" type="button" style="border-style: none;border-radius: 5px;font-family: 'Nunito Sans', sans-serif;text-align: center;padding-left: 12px;padding-right: 12px;padding-top: 9px;padding-bottom: 9px;font-size: 14px;color: #d1d1d1;background: #191a1c;margin-right: 9px;margin-top: 9px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-circle" style="margin-bottom: 3px;font-size: 18px;color: #acffac;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                </svg></button><button class="btn btn-dark" data-bss-hover-animate="pulse" type="button" style="border-style: none;border-radius: 5px;font-family: 'Nunito Sans', sans-serif;text-align: center;padding-left: 12px;padding-right: 12px;padding-top: 9px;padding-bottom: 9px;font-size: 14px;color: #d1d1d1;background: #191a1c;margin-right: 9px;margin-top: 9px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-circle-check" style="margin-bottom: 3px;font-size: 18px;color: var(--bs-orange);">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M9 12l2 2l4 -4"></path>
+                                </svg></button></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-xl-12 col-xxl-12 text-start mx-auto position-relative" style="padding-left: 23px;text-align: left;padding-right: 23px;">
+                        <p class="lead font-monospace" style="font-size: 14px;color: #d1d1d1;font-family: 'Nunito Sans', sans-serif;margin-bottom: -5px;text-align: left;padding-bottom: 5px;margin-top: 15px;border: 1px none #4b4b4b;border-top-width: 1px;border-top-style: none;border-bottom-style: none;border-bottom-color: #4b4b4b;">We at Lirecent believe that accessibility can make an unprecedented difference. Our products are built-upon open technologies further extended by documented APIs that let developers further build with. Lirecent services believe in transparency and let users manage their own data.<br></p>
+                        <p class="font-monospace text-uppercase ctdark" style="color: #d1d1d1;font-size: 15px;font-family: 'Nunito Sans', sans-serif;text-align: left;margin-bottom: 0px;padding-bottom: 1px;font-weight: bold;border-bottom: 1px solid #676767;padding-top: 5px;margin-top: 15px;">THE 'GLOBE LOGO'</p>
+                        <p class="lead font-monospace" style="font-size: 14px;color: #adadad;font-family: 'Nunito Sans', sans-serif;margin-bottom: 5px;text-align: left;padding-bottom: 0px;margin-top: 3px;border: 1px none #4b4b4b;border-top-width: 1px;border-top-style: none;border-bottom-style: none;border-bottom-color: #4b4b4b;">In harmony with transparency, the Lirecent 'globe logo' was designed with a wide spectrum of colours to signify inclusiveness, while the wrapping feather indicates oneness.</p>
+                        <div style="margin-top: 15px;"><a class="font-monospace" href="/products.html" style="color: #9663c4;"><em>Products</em></a><span class="font-monospace" style="font-style: italic;color: #9663c4;">&nbsp;|&nbsp;</span><a class="font-monospace" href="/contact.html" style="color: #9663c4;"><em>Get in touch</em></a></div>
+                        <div style="margin-top: 5px;border-top-style: none;"></div>
+                        <div style="background: url(&quot;assets/img/background/background_blueblack_blur.png&quot;) center / contain;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-xxl-12 text-start mx-auto position-relative" style="padding-left: 23px;text-align: left;padding-right: 23px;margin-top: 35px;">
+                        <section class="showcase" style="margin: 11px;"></section>
+                        <div data-bss-hover-animate="pulse" style="border-radius: 5px;background: #191a1c;margin-top: 9px;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button" style="width: 100%;padding-top: 9px;padding-right: 21px;padding-bottom: 9px;padding-left: 21px;color: #d1d1d1;font-size: 14px;font-family: 'Nunito Sans', sans-serif;text-align: center;border-style: none;background: transparent;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chart-line" style="margin-bottom: 3px;margin-right: 4px;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <line x1="4" y1="19" x2="20" y2="19"></line>
+                                    <polyline points="4 15 8 9 12 11 16 6 20 10"></polyline>
+                                </svg>INVEST</a>
+                            <div class="collapse" id="collapse-1" style="padding: 9px;">
+                                <div style="padding: 15px;background: #000000;border-radius: 5px;">
+                                    <p class="text-uppercase ctdark" style="color: #d1d1d1;font-size: 16px;font-family: 'Nunito Sans', sans-serif;text-align: left;margin-bottom: 0px;padding-bottom: 0px;font-weight: bold;letter-spacing: 0px;border-bottom: 1px none #676767 ;">Private Investment</p>
+                                    <p style="margin-bottom: 0px;color: #adadad;font-family: 'Nunito Sans', sans-serif;font-size: 14px;">Invest in Lirecent via IIC or start a conversation by tapping the button below:<br></p><a class="btn btn-dark" role="button" data-bss-hover-animate="pulse" style="border-style: none;border-radius: 4px;font-family: 'Nunito Sans', sans-serif;text-align: center;padding-left: 12px;padding-right: 12px;padding-top: 6px;padding-bottom: 6px;font-size: 16px;color: #d1d1d1;background: #191a1c;margin-top: 5px;" href="mailto:deltaonealpha@lirecent.com"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-messages" style="margin-bottom: 3px;margin-right: 4px;">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"></path>
+                                            <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"></path>
+                                        </svg>Start a conversation&nbsp;</a>
+                                    <p class="text-uppercase ctdark" style="color: #d1d1d1;font-size: 16px;font-family: 'Nunito Sans', sans-serif;text-align: left;margin-bottom: 5px;padding-bottom: 0px;font-weight: bold;margin-top: 15px;letter-spacing: 0px;border-bottom: 1px none #676767 ;">Referrals</p><a href="https://www.digitalocean.com/?refcode=9a8e2dfafbef&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge" style="border-radius:9px;"/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 35px;border-top-style: none;"></div>
+                        <div style="background: url(&quot;assets/img/background/background_blueblack_blur.png&quot;) center / contain;"></div>
+                    </div>
+                </div>
+            </div><script>
+var rtc = document.getElementById('rtctime');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
+    daylist = [" | MON", " | TUE", " | WED", " | THU", " | FRI", " | SAT", " | SUN"]
+  rtc.textContent = 
+    ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2) + daylist[d.getDay()-1];
+}
+
+setInterval(time, 1000);
+</script><div class="cursor"></div>
+<style>
+html {
+  color: #eee;
+  cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E") 3 3, auto;
+}
+
+.stroke-only {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: 600ms transform cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.transform-center-center {
+  transform-origin: center center;
+}
+a.link:hover:not(.contenttile) .stroke-only {
+  stroke: #b55400;
+}
+a.link:hover:not(.contenttile) .move-up {
+  transform: translateY(-16px);
+}
+a.link:hover:not(.contenttile) .move-right {
+  transform: translateX(10px);
+}
+a.link:hove:not(.contenttile)r .move-down {
+  transform: translateY(16px);
+}
+a.link:hover:not(.contenttile) .move-left {
+  transform: translateX(-10px);
+}
+a.link:hover:not(.contenttile) .move-up-little {
+  transform: translateY(-4px);
+}
+a.link:hover:not(.contenttile) .move-up-medium {
+  transform: translateY(-6px);
+}
+.svg-search {
+  transform-origin: 26px 26px;
+}
+a.link:hover:not(.contenttile) .turn-90 {
+  transform: rotate(90deg);
+}
+a.link:hover:not(.contenttile) .turn-15 {
+  transform: rotate(15deg);
+}
+.close, .min, .max {
+  position: absolute;
+  top: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #393e46;
+  border-radius: 50%;
+}
+.close {
+  left: 1rem;
+  background-color: #b55400;
+}
+.min {
+  left: 2.5rem;
+}
+.max {
+  left: 4rem;
+}
+.cursor {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--width);
+  height: var(--height);
+  transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
+  /* transition-duration: 125ms;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition-property: width, height, transform; */
+  transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1),
+              150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
+              150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+}
+@media (pointer: fine) {
+  .cursor {
+    display: block;
+  }
+}
+.cursor::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius);
+  border: 2px solid var(--cursorcolour);
+  opacity: var(--scale);
+  -webkit-transform: scale(var(--scale));
+          transform: scale(var(--scale));
+  transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
+              300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
+              150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+html:not(html:hover:not(.contenttile)) .cursor::after {
+  opacity: 0;
+  transform: scale(0);
+}
+</style>
+
+<script>
+const updateProperties = (elem, state) => {
+  elem.style.setProperty('--x', `${state.x}px`)
+  elem.style.setProperty('--y', `${state.y}px`)
+  elem.style.setProperty('--width', `${state.width}px`)
+  elem.style.setProperty('--height', `${state.height}px`)
+  elem.style.setProperty('--radius', state.radius)
+  elem.style.setProperty('--scale', state.scale)
+}
+
+document.querySelectorAll('.cursor').forEach(cursor => {
+  let onElement
+
+  const createState = e => {
+    const defaultState = {
+      x: e.clientX,
+      y: e.clientY,
+      width: 40,
+      height: 40,
+      radius: '50%'
+    }
+
+    const computedState = {}
+
+    if (onElement != null) {
+      const { top, left, width, height } = onElement.getBoundingClientRect()
+      const radius = window.getComputedStyle(onElement).borderTopLeftRadius
+
+      computedState.x = left + width / 2
+      computedState.y = top + height / 2
+      computedState.width = width
+      computedState.height = height
+      computedState.radius = radius
+    }
+
+    return {
+      ...defaultState,
+      ...computedState
+    }
+  }
+
+  document.addEventListener('mousemove', e => {
+    const state = createState(e)
+    updateProperties(cursor, state)
+  })
+
+  document.querySelectorAll('a, button').forEach(elem => {
+    elem.addEventListener('mouseenter', () => (onElement = elem))
+    elem.addEventListener('mouseleave', () => (onElement = undefined))
+  })
+})
+document.documentElement.style.setProperty('--cursorcolour', '#b55400');
+</script>
+        </header>
+    </div><style>
+.float{
+	position:fixed;
+	bottom:15px;
+	right:15px;
+    z-index:1;
+}
+
+.floatheader{
+	position:fixed;
+    width:100%;
+	top:0px;
+    left:0px;
+    z-index:1;
+}
+
+    
+.my-float{
+	margin-top:22px;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+var intervalId = window.setInterval(function(){
+alert("setexec");
+if(!$("#id").hasClass('show')){
+    alert("Uncollapsed");
+}
+else {
+    alert("Collapsed");
+}
+}, 200);
+    
+clearInterval(intervalId) 
+</script><style>
+@keyframes gradientx {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+</style>
+<script>
+function execPhaseChange_ltd() {
+document.getElementById("crpagediv").style.boxShadow = "5px 2px 20px 7px #7d7d7d5a";
+document.getElementById("crpagedivx").style.boxShadow = "5px 2px 20px 7px #7d7d7d5a";
+document.getElementById("collapseDiv").style.backgroundColor = "rgba(25,26,28,0.85)";
+document.getElementById("collapsesharediv").style.backgroundColor = "rgba(209,209,209,0.17)";
+var all = document.getElementsByClassName('ctdark');
+document.getElementById("ctwhite").style.color = "#d1d1d1";
+document.getElementById("ctwhite").style.backgroundColor = "#181818";
+console.log(all);
+for (var i = 0; i < all.length; i++) {
+    console.log("t3");
+    console.log(all[i]);
+    all[i].style.color = '#181818';
+}
+}
+
+function execPhaseChange_dtl() {
+document.getElementById("crpagediv").style.boxShadow = "5px 2px 20px 7px #0c0c0c";
+document.getElementById("crpagedivx").style.boxShadow = "5px 2px 20px 7px #0c0c0c";
+document.getElementById("collapsesharediv").style.backgroundColor = "rgba(25,26,28,0.85)";
+document.getElementById("collapseDiv").style.backgroundColor = "rgba(209,209,209,0.17)";
+var all = document.getElementsByClassName('ctdark');
+console.log(all);
+document.getElementById("ctwhite").style.color = "#181818";
+document.getElementById("ctwhite").style.backgroundColor = "#d1d1d1";
+for (var i = 0; i < all.length; i++) {
+    console.log("t3");
+    console.log(all[i]);
+    all[i].style.color = '#d1d1d1';
+}
+}
+function getCssValuePrefix()
+{
+    var rtrnVal = '';//default to standard syntax
+    var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
+
+    // Create a temporary DOM object for testing
+    var dom = document.createElement('div');
+
+    for (var i = 0; i < prefixes.length; i++)
+    {
+        // Attempt to set the style
+        dom.style.background = prefixes[i] + 'linear-gradient(#000000, #ffffff)';
+
+        // Detect if the style was successfully set
+        if (dom.style.background)
+        {
+            rtrnVal = prefixes[i];
+        }
+    }
+
+    dom = null;
+    delete dom;
+
+    return rtrnVal;
+}
+
+function changeTheme(themeName,referenceNumber,thisElement) {
+document.getElementById("po_theme_bt_1").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById("po_theme_bt_2").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById("po_theme_bt_3").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById("po_theme_bt_5").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById("po_theme_bt_6").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById("po_theme_bt_2").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById("po_theme_bt_7").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById("po_theme_bt_8").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById("po_theme_bt_9").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById("po_theme_bt_10").style.borderBottom = "2px solid #4b4b4b";
+document.getElementById(thisElement).style.borderBottom = "2px solid #60c659";
+
+if (referenceNumber == 1) {
+execPhaseChange_dtl();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #010306, #051029, #020713, #010306)";
+}
+else if (referenceNumber == 2) {
+execPhaseChange_dtl();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #010306, #291205, #1e0c00 66%, #010306)";
+}
+else if (referenceNumber == 3) {
+execPhaseChange_dtl();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #010306, #373737, #2d2d2d 66%, #010306)";
+}
+else if (referenceNumber == 4) {
+execPhaseChange_dtl();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #010306, #181818, #000000 66%, #181818)";
+}
+else if (referenceNumber == 5) {
+execPhaseChange_dtl();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #010306, #220529, #11001e 66%, #010306)";
+}
+else if (referenceNumber == 6) {
+execPhaseChange_dtl();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #010306, #1c2d0b, #041e00 66%, #010306)";
+}       
+else if (referenceNumber == 7) {
+execPhaseChange_ltd();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #ffffff, #b5ccff, #f8e4ff, #d1d1d1)";
+}
+else if (referenceNumber == 8) {
+execPhaseChange_ltd();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #ffffff, #ffc48a, #ffebd8, #d1d1d1)";
+}
+else if (referenceNumber == 9) {
+execPhaseChange_ltd();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #ffffff, #969696 77%, #cccccc 85%, #ffffff)";
+}
+else if (referenceNumber == 10) {
+execPhaseChange_ltd();
+document.body.style.backgroundImage  = getCssValuePrefix() + "linear-gradient(0deg, #ffffff, #bbcca8 13%, #bbcca8 85%, #ffffff)";
+}
+else if (referenceNumber == 11) {
+execPhaseChange_ltd();
+document.body.style.backgroundImage  = 'url("assets/img/bgshader/White%20Tropical%20Leaves%20Wallpaper%20R6090%20-%20Base.jpg")';
+}
+document.body.style.WebkitAnimation = "gradientx 2s ease infinite";
+document.body.style.animation = "gradientx 2s ease infinite";
+document.getElementById("divsyncingtoserver").style.display = "block";
+function timeFunction() {
+setTimeout(function(){ document.body.style.WebkitAnimation = "gradientx 85s ease infinite";
+document.body.style.animation = "gradientx 85s ease infinite";
+document.getElementById("divsyncingtoserver").style.display = "none";
+ }, 1400);}
+timeFunction();
+}
+
+var slider = document.getElementById('font-size');
+
+slider.addEventListener('input', function() {
+    var size = slider.value;
+    // this sets the body's font size property, but you can set whatever you need to
+   document.getElementById("contentparagraph").style.fontSize = size + "px"; 
+    document.getElementById("sampleparagraph").style.fontSize = size + "px"; 
+});
+</script>
+<script>
+function fontrange_mouseon() {
+document.getElementById("contentbody").style.filter = "blur(1px)";
+$("contentbody").animate({
+  opacity: '1',
+});
+};
+
+function fontrange_mouseoff() {
+$("contentbody").animate({
+  opacity: '0.09',
+});
+document.getElementById("contentbody").style.filter = "blur(5px)";
+};
+</script><script>
+jQuery(document).click( function(e) {
+console.log("bodyclick");
+if (!$(e.target).is(jQuery('#collapseDiv'))) {
+   console.log("d3rtt"); jQuery('#maincollapse').collapse('hide');}
+});
+</script><script>
+jQuery('#posm1').click( function(e) {
+    jQuery('#collapse-2').collapse('hide');
+    jQuery('#collapse-3').collapse('hide');
+    jQuery('#collapse-4').collapse('hide');
+    jQuery('#collapse-5').collapse('hide');
+    jQuery('#collapse-6').collapse('hide');
+});
+
+jQuery('#posm2').click( function(e) {
+    jQuery('#collapse-1').collapse('hide');
+    jQuery('#collapse-3').collapse('hide');
+    jQuery('#collapse-4').collapse('hide');
+    jQuery('#collapse-5').collapse('hide');
+    jQuery('#collapse-6').collapse('hide');
+});
+
+jQuery('#posm3').click( function(e) {
+    jQuery('#collapse-1').collapse('hide');
+    jQuery('#collapse-2').collapse('hide');
+    jQuery('#collapse-4').collapse('hide');
+    jQuery('#collapse-5').collapse('hide');
+    jQuery('#collapse-6').collapse('hide');
+});
+
+jQuery('#posm4').click( function(e) {
+    jQuery('#collapse-1').collapse('hide');
+    jQuery('#collapse-2').collapse('hide');
+    jQuery('#collapse-3').collapse('hide');
+    jQuery('#collapse-5').collapse('hide');
+    jQuery('#collapse-6').collapse('hide');
+});
+
+jQuery('#posm5').click( function(e) {
+    jQuery('#collapse-1').collapse('hide');
+    jQuery('#collapse-2').collapse('hide');
+    jQuery('#collapse-3').collapse('hide');
+    jQuery('#collapse-4').collapse('hide');
+    jQuery('#collapse-6').collapse('hide');
+});
+
+jQuery('#posm6').click( function(e) {
+    jQuery('#collapse-1').collapse('hide');
+    jQuery('#collapse-2').collapse('hide');
+    jQuery('#collapse-3').collapse('hide');
+    jQuery('#collapse-4').collapse('hide');
+    jQuery('#collapse-5').collapse('hide');
+});
+
+function hiderlprev() {
+if (document.getElementById("contentbody").style.opacity == "0.09") {
+document.getElementById("contentbody").style.opacity = "1";
+document.getElementById("contentbody").style.filter = "blur(0px)";
+document.getElementById("pageoptionstriggerbutton").innerHTML = "/NAVIGATE";
+} else {        
+document.getElementById("contentbody").style.opacity = "0.09";
+document.getElementById("contentbody").style.filter = "blur(5px)";
+document.getElementById("pageoptionstriggerbutton").innerHTML = ">";
+$("#pageoptionstriggerbutton").appendTo("#pageoptionstriggerbuttonmovediv");}}
+</script><script src="granim.js"></script>
+<script>
+var granimInstance = new Granim({
+    element: '#body',
+    direction: 'left-right',
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+		gradients: [ ['#ffffff', '#b5ccff', '#efe8ff', '#d1d1d1'] ],
+        }
+    }
+});
+</script><script>
+let root = document.documentElement;
+document.documentElement.style.setProperty('--shadowcolour', '5px 2px 20px 7px #7d7d7d47');
+document.documentElement.style.setProperty('--bgcolour', 'rgba(209,209,209,0.17)');
+document.documentElement.style.setProperty('--contentcardboxshadow', '5px 2px 20px 7px #7d7d7d47');
+document.documentElement.style.setProperty('--textcolour', '#383738');
+document.documentElement.style.setProperty('--bordercolour', '1px solid #343434');
+document.documentElement.style.setProperty('--innerboxshadowlth', '5px 2px 16px 7px rgba(160,160,160,0.34)');
+document.documentElement.style.setProperty('--stackbuttonbg', '#1b1b1be1');
+document.documentElement.style.setProperty('--stackbuttonfg', '#181718');
+document.documentElement.style.setProperty('--stackbutton2cbg', 'rgb(55,55,55)');
+document.documentElement.style.setProperty('--stackbutton2cfg', '#d1d1d1');
+    
+document.documentElement.style.setProperty('--cursorcolour', '#b55400');
+    
+function getCssValuePrefix()
+{
+    var rtrnVal = '';//default to standard syntax
+    var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
+
+    // Create a temporary DOM object for testing
+    var dom = document.createElement('div');
+
+    for (var i = 0; i < prefixes.length; i++)
+    {
+        // Attempt to set the style
+        dom.style.background = prefixes[i] + 'linear-gradient(#000000, #ffffff)';
+
+        // Detect if the style was successfully set
+        if (dom.style.background)
+        {
+            rtrnVal = prefixes[i];
+        }
+    }
+
+    dom = null;
+    delete dom;
+
+    return rtrnVal;
+}
+    
+function darkTheme() {
+document.getElementById("body").style.backgroundImage = ""; 
+document.getElementById("body").style.backgroundImage  = getCssValuePrefix() + "";
+document.getElementById("body").style.background = "#161616";
+
+let root = document.documentElement;
+document.documentElement.style.setProperty('--contentcardboxshadow', '-1px -1px 19px 1px rgba(0,0,0,0.2)');
+document.documentElement.style.setProperty('--stackbuttonbg', '#1B1B1B');
+document.documentElement.style.setProperty('--stackbuttonfg', '#adadad');
+document.documentElement.style.setProperty('--stackbutton2cbg', '#292929');
+document.documentElement.style.setProperty('--stackbutton2cfg', '#adadad');
+document.documentElement.style.setProperty('--shadowcolour', 'rgba(10,10,10,0.27)');
+document.documentElement.style.setProperty('--bgcolour', '#292929');
+document.documentElement.style.setProperty('--textcolour', '#adadad');
+    
+document.documentElement.style.setProperty('--bordercolour', '1px solid #676767');
+document.documentElement.style.setProperty('--innerboxshadowlth', '');
+    
+document.documentElement.style.setProperty('--cursorcolour', '#b55400');
+    
+var contenttilemainbgarray = document.getElementsByClassName("contenttilemainbg");
+
+var arrayLength = contenttilemainbgarray.length;
+for (var i = 0; i < arrayLength; i++) {
+    contenttilemainbgarray[i].style.background = "linear-gradient(rgba(34,40,49,0.22), rgba(34,40,49,0.91) 27%, #222831 61%)";
+    //Do something
+}
+iziToast.show({
+    title: 'Dark Mode',
+    timeout: 3589,
+    displayMode: "once",
+    messageColor: "#181718",
+    titleColor: "#181718",
+    pauseOnHover: true,
+    theme: 'light', // light
+    backgroundColor: '#d1d1d1',
+    position: 'topCenter', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+    message: "Lirecent's dark color palette has been enabled. Switch back to light mode from the settings page."
+});
+}
+
+</script><script>
+let root = document.documentElement;
+document.documentElement.style.setProperty('--shadowcolour', '5px 2px 20px 7px #7d7d7d47');
+document.documentElement.style.setProperty('--bgcolour', 'rgba(209,209,209,0.17)');
+document.documentElement.style.setProperty('--contentcardboxshadow', '5px 2px 20px 7px #7d7d7d47');
+document.documentElement.style.setProperty('--textcolour', '#383738');
+document.documentElement.style.setProperty('--bordercolour', '1px solid #343434');
+document.documentElement.style.setProperty('--innerboxshadowlth', '5px 2px 16px 7px rgba(160,160,160,0.34)');
+document.documentElement.style.setProperty('--stackbuttonbg', '#1b1b1be1');
+document.documentElement.style.setProperty('--stackbuttonfg', '#181718');
+document.documentElement.style.setProperty('--stackbutton2cbg', 'rgb(55,55,55)');
+document.documentElement.style.setProperty('--stackbutton2cfg', '#d1d1d1');
+    
+document.documentElement.style.setProperty('--cursorcolour', '#b55400');
+    
+function getCssValuePrefix()
+{
+    var rtrnVal = '';//default to standard syntax
+    var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
+
+    // Create a temporary DOM object for testing
+    var dom = document.createElement('div');
+
+    for (var i = 0; i < prefixes.length; i++)
+    {
+        // Attempt to set the style
+        dom.style.background = prefixes[i] + 'linear-gradient(#000000, #ffffff)';
+
+        // Detect if the style was successfully set
+        if (dom.style.background)
+        {
+            rtrnVal = prefixes[i];
+        }
+    }
+
+    dom = null;
+    delete dom;
+
+    return rtrnVal;
+}
+    
+function darkTheme() {
+document.getElementById("body").style.backgroundImage = ""; 
+document.getElementById("body").style.backgroundImage  = getCssValuePrefix() + "";
+document.getElementById("body").style.background = "#161616";
+
+let root = document.documentElement;
+document.documentElement.style.setProperty('--contentcardboxshadow', '-1px -1px 19px 1px rgba(0,0,0,0.2)');
+document.documentElement.style.setProperty('--stackbuttonbg', '#1B1B1B');
+document.documentElement.style.setProperty('--stackbuttonfg', '#adadad');
+document.documentElement.style.setProperty('--stackbutton2cbg', '#292929');
+document.documentElement.style.setProperty('--stackbutton2cfg', '#adadad');
+document.documentElement.style.setProperty('--shadowcolour', 'rgba(10,10,10,0.27)');
+document.documentElement.style.setProperty('--bgcolour', '#292929');
+document.documentElement.style.setProperty('--textcolour', '#adadad');
+    
+document.documentElement.style.setProperty('--bordercolour', '1px solid #676767');
+document.documentElement.style.setProperty('--innerboxshadowlth', '');
+    
+document.documentElement.style.setProperty('--cursorcolour', '#b55400');
+    
+var contenttilemainbgarray = document.getElementsByClassName("contenttilemainbg");
+
+var arrayLength = contenttilemainbgarray.length;
+for (var i = 0; i < arrayLength; i++) {
+    contenttilemainbgarray[i].style.background = "linear-gradient(rgba(34,40,49,0.22), rgba(34,40,49,0.91) 27%, #222831 61%)";
+    //Do something
+}
+iziToast.show({
+    title: 'Dark Mode',
+    timeout: 3589,
+    displayMode: "once",
+    messageColor: "#181718",
+    titleColor: "#181718",
+    pauseOnHover: true,
+    theme: 'light', // light
+    backgroundColor: '#d1d1d1',
+    position: 'topCenter', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+    message: "Lirecent's dark color palette has been enabled. Switch back to light mode from the settings page."
+});
+}
+
+</script><script>
+let root = document.documentElement;
+document.documentElement.style.setProperty('--shadowcolour', '5px 2px 20px 7px #7d7d7d47');
+document.documentElement.style.setProperty('--bgcolour', 'rgba(209,209,209,0.17)');
+document.documentElement.style.setProperty('--contentcardboxshadow', '5px 2px 20px 7px #7d7d7d47');
+document.documentElement.style.setProperty('--textcolour', '#383738');
+document.documentElement.style.setProperty('--bordercolour', '1px solid #343434');
+document.documentElement.style.setProperty('--innerboxshadowlth', '5px 2px 16px 7px rgba(160,160,160,0.34)');
+document.documentElement.style.setProperty('--stackbuttonbg', '#1b1b1be1');
+document.documentElement.style.setProperty('--stackbuttonfg', '#181718');
+document.documentElement.style.setProperty('--stackbutton2cbg', 'rgb(55,55,55)');
+document.documentElement.style.setProperty('--stackbutton2cfg', '#d1d1d1');
+    
+document.documentElement.style.setProperty('--cursorcolour', '#b55400');
+    
+function getCssValuePrefix()
+{
+    var rtrnVal = '';//default to standard syntax
+    var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
+
+    // Create a temporary DOM object for testing
+    var dom = document.createElement('div');
+
+    for (var i = 0; i < prefixes.length; i++)
+    {
+        // Attempt to set the style
+        dom.style.background = prefixes[i] + 'linear-gradient(#000000, #ffffff)';
+
+        // Detect if the style was successfully set
+        if (dom.style.background)
+        {
+            rtrnVal = prefixes[i];
+        }
+    }
+
+    dom = null;
+    delete dom;
+
+    return rtrnVal;
+}
+    
+function darkTheme() {
+document.getElementById("body").style.backgroundImage = ""; 
+document.getElementById("body").style.backgroundImage  = getCssValuePrefix() + "";
+document.getElementById("body").style.background = "#161616";
+
+let root = document.documentElement;
+document.documentElement.style.setProperty('--contentcardboxshadow', '-1px -1px 19px 1px rgba(0,0,0,0.2)');
+document.documentElement.style.setProperty('--stackbuttonbg', '#1B1B1B');
+document.documentElement.style.setProperty('--stackbuttonfg', '#adadad');
+document.documentElement.style.setProperty('--stackbutton2cbg', '#292929');
+document.documentElement.style.setProperty('--stackbutton2cfg', '#adadad');
+document.documentElement.style.setProperty('--shadowcolour', 'rgba(10,10,10,0.27)');
+document.documentElement.style.setProperty('--bgcolour', '#292929');
+document.documentElement.style.setProperty('--textcolour', '#adadad');
+    
+document.documentElement.style.setProperty('--bordercolour', '1px solid #676767');
+document.documentElement.style.setProperty('--innerboxshadowlth', '');
+    
+document.documentElement.style.setProperty('--cursorcolour', '#b55400');
+    
+var contenttilemainbgarray = document.getElementsByClassName("contenttilemainbg");
+
+var arrayLength = contenttilemainbgarray.length;
+for (var i = 0; i < arrayLength; i++) {
+    contenttilemainbgarray[i].style.background = "linear-gradient(rgba(34,40,49,0.22), rgba(34,40,49,0.91) 27%, #222831 61%)";
+    //Do something
+}
+iziToast.show({
+    title: 'Dark Mode',
+    timeout: 3589,
+    displayMode: "once",
+    messageColor: "#181718",
+    titleColor: "#181718",
+    pauseOnHover: true,
+    theme: 'light', // light
+    backgroundColor: '#d1d1d1',
+    position: 'topCenter', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+    message: "Lirecent's dark color palette has been enabled. Switch back to light mode from the settings page."
+});
+}
+
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/granim.js"></script>
+    <script src="assets/js/granim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery.passwordRequirements.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/responsive-blog-card-slider-1.js"></script>
+    <script src="assets/js/responsive-blog-card-slider.js"></script>
+    <script src="assets/js/Sidebar-right-opening.js"></script>
+    <script src="assets/js/sweetalert2@10.js"></script>
+    <script src="assets/js/Swiper-Slider-Card-For-Blog-Or-Product.js"></script>
+    <script src="assets/js/wysiwyg.js"></script>
+</body>
+
+</html>
