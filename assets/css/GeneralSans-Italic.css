@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'GeneralSans-Italic';
+	src: url(../../assets/fonts/GeneralSans-Italic.woff2) format('woff2'),
+	url(../../assets/fonts/GeneralSans-Italic.woff) format('woff'),
+	url(../../assets/fonts/GeneralSans-Italic.ttf) format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}

@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'GeneralSans-Semibold';
+	src: url(../../assets/fonts/GeneralSans-Semibold.woff2) format('woff2'),
+	url(../../assets/fonts/GeneralSans-Semibold.woff) format('woff'),
+	url(../../assets/fonts/GeneralSans-Semibold.ttf) format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}

@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'GeneralSans-Extralight';
+	src: url(../../assets/fonts/GeneralSans-Extralight.woff2) format('woff2'),
+	url(../../assets/fonts/GeneralSans-Extralight.woff) format('woff'),
+	url(../../assets/fonts/GeneralSans-Extralight.ttf) format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}

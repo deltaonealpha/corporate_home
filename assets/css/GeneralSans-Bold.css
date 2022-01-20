@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'GeneralSans-Bold';
+	src: url(../../assets/fonts/GeneralSans-Bold.woff2) format('woff2'),
+	url(../../assets/fonts/GeneralSans-Bold.woff) format('woff'),
+	url(../../assets/fonts/GeneralSans-Bold.ttf) format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}

@@ -74,3 +74,23 @@
   color: #ddd;
 }
 
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+}
+
+.sticky {
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.faded2 {
+  transition: opacity .45s ease-in !important;
+}
+
+.faded3 {
+  transition: background-color 1.9s ease-in !important;
+}
+
