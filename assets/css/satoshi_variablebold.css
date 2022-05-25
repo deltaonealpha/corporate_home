@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'satoshi_variablebold';
+	src: url(../../assets/fonts/satoshi-variable-webfont.eot?h=52638f5a27dc7ab5537632a54bf3debf) format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'satoshi_variablebold';
+	src: url(../../assets/fonts/satoshi_variablebold.woff2?h=52638f5a27dc7ab5537632a54bf3debf) format('woff2'),
+	url(../../assets/fonts/satoshi_variablebold.woff?h=52638f5a27dc7ab5537632a54bf3debf) format('woff'),
+	url(../../assets/fonts/satoshi-variable-webfont.ttf?h=52638f5a27dc7ab5537632a54bf3debf) format('truetype'),
+	url(../../assets/fonts/satoshi-variable-webfont.svg?h=52638f5a27dc7ab5537632a54bf3debf) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

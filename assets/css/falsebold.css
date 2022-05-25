@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'falsebold';
+	src: url(../../assets/fonts/amulya-bold-webfont.eot) format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'falsebold';
+	src: url(../../assets/fonts/falsebold.woff2) format('woff2'),
+	url(../../assets/fonts/falsebold.woff) format('woff'),
+	url(../../assets/fonts/amulya-bold-webfont.ttf) format('truetype'),
+	url(../../assets/fonts/amulya-bold-webfont.svg) format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: auto;
+}

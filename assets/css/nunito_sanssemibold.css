@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'nunito_sanssemibold';
+	src: url(../../assets/fonts/nunitosans-semibold-webfont.eot) format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'nunito_sanssemibold';
+	src: url(../../assets/fonts/nunito_sanssemibold.woff2) format('woff2'),
+	url(../../assets/fonts/nunito_sanssemibold.woff) format('woff'),
+	url(../../assets/fonts/nunitosans-semibold-webfont.ttf) format('truetype'),
+	url(../../assets/fonts/nunitosans-semibold-webfont.svg) format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: auto;
+}

@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'falsenormal';
+	src: url(../../assets/fonts/satoshi-regular-webfont.eot) format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'falsenormal';
+	src: url(../../assets/fonts/falsenormal.woff2) format('woff2'),
+	url(../../assets/fonts/falsenormal.woff) format('woff'),
+	url(../../assets/fonts/satoshi-regular-webfont.ttf) format('truetype'),
+	url(../../assets/fonts/satoshi-regular-webfont.svg) format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'falsenormal';
+	src: url(../../assets/fonts/stardom-regular-webfont.eot) format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'falsenormal';
+	src: url(../../assets/fonts/falsenormal.woff2) format('woff2'),
+	url(../../assets/fonts/falsenormal.woff) format('woff'),
+	url(../../assets/fonts/stardom-regular-webfont.ttf) format('truetype'),
+	url(../../assets/fonts/stardom-regular-webfont.svg) format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: auto;
+}
