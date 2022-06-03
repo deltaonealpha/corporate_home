@@ -1,9 +1,0 @@
-@font-face {
-	font-family: 'ClashGrotesk-Variable';
-	src: url(../../assets/fonts/ClashGrotesk-Variable.woff2) format('woff2'),
-	url(../../assets/fonts/ClashGrotesk-Variable.woff) format('woff'),
-	url(../../assets/fonts/ClashGrotesk-Variable.ttf) format('truetype');
-	font-weight: 200 700;
-	font-style: normal;
-	font-display: auto;
-}
